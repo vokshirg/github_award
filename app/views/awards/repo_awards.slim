@@ -2,3 +2,9 @@ h1 Top contributors
 span
   = "Repo: "
   = link_to @link, @link
+
+= render partial: 'contributor', collection: @contributors, as: :contrib
+= link_to awards_download_zip_path(contribs: @contributors), class: 'button center', target: '_blank'
+  = fa_icon 'file-archive'
+  |   Download ZIP
+= link_to 'Back', root_path, class: 'button center light'

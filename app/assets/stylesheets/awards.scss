@@ -74,4 +74,49 @@
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.contrib {
+  text-align: left;
+  background: #dbdae2;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 20px;
 
+  .place-name {
+    display: block;
+    float: left;
+  }
+
+  img {
+    max-width: 64px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 5px 20px;
+    float: left
+  }
+  &.place-1 {
+    background: #ffe100;
+  }
+  &.place-2 {
+    background: #dfdfdf;
+  }
+  &.place-3 {
+    background: #b46f40;
+  }
+  .login {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  span {
+    color: #666666;
+    font-size: 10px;
+  }
+
+  .pdf_diplom {
+    float: right;
+    color: #2E2F30;
+    margin-top: 15px;
+  }
+
+}

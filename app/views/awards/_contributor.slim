@@ -1,0 +1,20 @@
+.contrib class="place-#{contrib[:place]}"
+  = link_to awards_diplom_path(format: :pdf, contrib: contrib), class: 'pdf_diplom', target: '_blank'
+    = fa_icon 'file-pdf', size: '3x'
+
+  .place-name
+    h1
+      = contrib[:place]
+      |  Place
+  = link_to contrib[:author][:html_url] do
+
+    = image_tag contrib[:author][:avatar_url]
+    .login = contrib[:author][:login]
+
+
+  span
+    = contrib[:total]
+    |  commits
+
+
+  .clearfix
