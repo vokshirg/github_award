@@ -1,0 +1,14 @@
+.pdf.contrib style=''
+  h1
+    = contrib[:place]
+    |  Place
+
+  = link_to contrib[:author][:html_url] do
+
+    = image_tag contrib[:author][:avatar_url]
+    br
+    = contrib[:author][:login]
+
+  br
+  span = contrib[:total]
+  .big_text Congratulations!

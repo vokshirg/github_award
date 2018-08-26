@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | Github Awards
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .box
+      .error
+        - flash.each do |name, msg|
+          = content_tag :div, msg, class: name
+      = yield

@@ -62,3 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'slim'
 gem 'rest-client'
 gem 'font_awesome5_rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'rubyzip'
