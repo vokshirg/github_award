@@ -52,9 +52,11 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
+  gem 'rails-controller-testing'
   gem 'capybara'
 end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'slim'

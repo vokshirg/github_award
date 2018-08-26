@@ -1,0 +1,4 @@
+H2 Enter Github repository path
+= form_tag "awards/repo_awards", method: :get, class: 'repo_form' do
+  = text_field_tag :link, 'https://github.com/rails/rails', class: 'input_link'
+  = submit_tag 'Get Awards', class: 'button'
