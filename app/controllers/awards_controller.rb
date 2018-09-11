@@ -3,10 +3,11 @@ class AwardsController < ApplicationController
   end
 
   def repo_awards
-    @link = params[:link]
-    @contributors = Award.top_contributors_by_link(@link)
-    unless @contributors
-      flash[:error] = "Link empty or invalid"
+    result = GetTopContributors.call(repo: params[:link])
+    if result.success?
+      @contributors = result.contributors
+    else
+      flash[:error] = result.message
       redirect_to action: 'index'
     end
   end
@@ -25,9 +26,9 @@ class AwardsController < ApplicationController
 
   def download_zip
     require 'zip'
-    @contribs = params[:contribs]
+    contribs = params[:contribs]
     stringio = Zip::OutputStream.write_buffer do |zio|
-      @contribs.each do |contrib|
+      contribs.each do |contrib|
         #create and add a pdf file for this record
         dec_pdf = render_to_string pdf: "#{contrib[:author][:login]}.pdf",
                                    template: 'awards/diplom.pdf',

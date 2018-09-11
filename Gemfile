@@ -65,3 +65,4 @@ gem 'font_awesome5_rails'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'rubyzip'
+gem "interactor-rails", "~> 2.0"
